@@ -23,6 +23,7 @@ export default defineConfig({
               `party/${clean}`,
               `npcs/${clean}`,
               `locations/${clean}`,
+              `relics/${clean}`,
               `recaps/${clean}`,
               clean,
             ];

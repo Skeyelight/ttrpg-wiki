@@ -1,5 +1,5 @@
 ---
-title: Locations
+title: All Locations
 description: All locations in our campaign.
 ---
 
@@ -18,6 +18,6 @@ Welcome to the locations index. Browse the sidebar or select a location below:
 - [[Locations/Tsolenka Pass|Tsolenka Pass]]
 - [[Locations/Wizard of the Wines|Wizard of the Wines]]
 - [[Locations/Yester Hill|Yester Hill]]
-- [[Locations/Town of Vallaki|Town of Valaki]]
+- [[Locations/Town of Vallaki/index|Town of Valaki]]
 - [[Locations/Village of Barovia|Village of Barovia]]
 - [[Locations/Village of Krezk|Villahe of Krezk]]

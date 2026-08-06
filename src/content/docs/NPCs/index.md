@@ -1,6 +1,6 @@
 ---
-title: NPCS
-description: All lNPCs in our campaign.
+title: All NPCS
+description: All NPCs in our campaign.
 ---
 
 # NPCs

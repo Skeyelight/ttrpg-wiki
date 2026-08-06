@@ -1,5 +1,5 @@
 ---
-title: Recaps
+title: All Recaps
 description: Campaign recaps from the begining. 
 ---
 

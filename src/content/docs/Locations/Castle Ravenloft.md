@@ -2,4 +2,4 @@
 title: "Castle Ravenloft"
 ---
 
-Home of [[Strahd von Zarovich]]
+Home of [[NPCs/Strahd von Zarovich|Strahd]]

@@ -1,7 +1,7 @@
 ---
-title: "Burgomaster’s Mansion"
+title: "Burgomaster's Mansion"
 ---
 
-# Burgomaster’s Mansion
+# Burgomaster's Mansion
 
 Notes coming soon...

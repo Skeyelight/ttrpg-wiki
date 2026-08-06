@@ -8,15 +8,22 @@ export default defineConfig({
       [
         remarkWikiLink,
         {
-          // Generates possible path matches for a link name
+          aliasDivider: '|',
           pageResolver: (pageName) => {
-            const slug = pageName.toLowerCase().replace(/ /g, '-');
+            // Strip any folder path if the user typed [[Locations/Castle Ravenloft]]
+            const cleanName = pageName.includes('/')
+              ? pageName.split('/').pop()
+              : pageName;
+
+            const slug = cleanName.toLowerCase().replace(/ /g, '-');
+
+            // Return possible folder locations for Astro to look up
             return [
-              slug,
               `locations/${slug}`,
               `npcs/${slug}`,
               `party/${slug}`,
               `recaps/${slug}`,
+              slug,
             ];
           },
           hrefTemplate: (permalink) => `/${permalink}`,

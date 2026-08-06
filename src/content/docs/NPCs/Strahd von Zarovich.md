@@ -1,4 +1,8 @@
 ---
+title: "Strahd von Zarovich"
+---
+
+---
 aliases:
   - Strahd
 ---

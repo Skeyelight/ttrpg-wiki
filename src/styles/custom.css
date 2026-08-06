@@ -1,0 +1,17 @@
+/* Dark Mode Base Overrides */
+:root[data-theme='dark'] {
+  --sl-color-accent-low: #2a2415;
+  --sl-color-accent: #e5b842;       /* LegendKeeper Gold Accent */
+  --sl-color-accent-high: #fef08a;
+  --sl-color-white: #f3f4f6;
+  --sl-color-gray-6: #121316;       /* Deep Charcoal Background */
+  --sl-color-gray-5: #1c1e24;       /* Panel / Card Background */
+  --sl-color-gray-4: #2d313b;       /* Borders */
+  --sl-font-header: 'Cinzel', serif;
+}
+
+/* Header Typography */
+h1, h2, h3, h4 {
+  font-family: var(--sl-font-header);
+  color: #e5b842 !important;
+}

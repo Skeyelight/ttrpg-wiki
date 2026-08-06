@@ -1,0 +1,25 @@
+---
+interface Props {
+  mapImage: string;
+  height?: string;
+}
+
+const { mapImage, height = '600px' } = Astro.props;
+---
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<div id="ttrpg-map" style={`height: ${height}; width: 100%; border-radius: 8px; border: 1px solid #2d313b;`}></div>
+
+<script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script is:inline define:vars={{ mapImage }}>
+  document.addEventListener('DOMContentLoaded', () => {
+    const map = L.map('ttrpg-map', { crs: L.CRS.Simple, minZoom: -1 });
+    const bounds = [[0, 0], [1000, 1500]];
+    L.imageOverlay(mapImage, bounds).addTo(map);
+    map.fitBounds(bounds);
+
+    // Example Marker — adjust coordinates to fit your map image
+    const capital = L.marker([500, 750]).addTo(map);
+    capital.bindPopup('<b>Capital City</b><br><a href="/locations/capital-city">Read Lore Page</a>');
+  });
+</script>

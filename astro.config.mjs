@@ -10,23 +10,24 @@ export default defineConfig({
         {
           aliasDivider: '|',
           pageResolver: (pageName) => {
-            // Strip any folder path if the user typed [[Locations/Castle Ravenloft]]
-            const cleanName = pageName.includes('/')
-              ? pageName.split('/').pop()
-              : pageName;
+            // Clean up casing and spaces
+            const clean = pageName.trim().toLowerCase().replace(/ /g, '-');
 
-            const slug = cleanName.toLowerCase().replace(/ /g, '-');
+            // If a path was explicitly provided (e.g. Party/Cole), preserve the path structure!
+            if (clean.includes('/')) {
+              return [clean];
+            }
 
-            // Return possible folder locations for Astro to look up
+            // Fallback resolver for simple links (e.g. [[Cole]])
             return [
-              `locations/${slug}`,
-              `npcs/${slug}`,
-              `party/${slug}`,
-              `recaps/${slug}`,
-              slug,
+              `party/${clean}`,
+              `npcs/${clean}`,
+              `locations/${clean}`,
+              `recaps/${clean}`,
+              clean,
             ];
           },
-          hrefTemplate: (permalink) => `/${permalink}`,
+          hrefTemplate: (permalink) => `/${permalink.toLowerCase()}`,
         },
       ],
     ],

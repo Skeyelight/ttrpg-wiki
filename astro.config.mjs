@@ -8,9 +8,17 @@ export default defineConfig({
       [
         remarkWikiLink,
         {
-          pageResolver: (pageName) => [
-            pageName.toLowerCase().replace(/ /g, '-'),
-          ],
+          // Generates possible path matches for a link name
+          pageResolver: (pageName) => {
+            const slug = pageName.toLowerCase().replace(/ /g, '-');
+            return [
+              slug,
+              `locations/${slug}`,
+              `npcs/${slug}`,
+              `party/${slug}`,
+              `recaps/${slug}`,
+            ];
+          },
           hrefTemplate: (permalink) => `/${permalink}`,
         },
       ],

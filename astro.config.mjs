@@ -52,6 +52,11 @@ export default defineConfig({
           collapsed: true,
           items: [{ autogenerate: { directory: 'Party' } }],
         },
+                {
+          label: 'Relics',
+          collapsed: true,
+          items: [{ autogenerate: { directory: 'Relics' } }],
+        },
         {
           label: 'Recaps',
           collapsed: true,

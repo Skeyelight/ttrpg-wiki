@@ -23,19 +23,23 @@ export default defineConfig({
       sidebar: [
         {
           label: 'Locations',
-          autogenerate: { directory: 'Locations', collapsed: true },
+          collapsed: true,
+          items: [{ autogenerate: { directory: 'Locations' } }],
         },
         {
           label: 'NPCs',
-          autogenerate: { directory: 'NPCs', collapsed: true },
+          collapsed: true,
+          items: [{ autogenerate: { directory: 'NPCs' } }],
         },
         {
           label: 'Party',
-          autogenerate: { directory: 'Party', collapsed: true },
+          collapsed: true,
+          items: [{ autogenerate: { directory: 'Party' } }],
         },
         {
           label: 'Recaps',
-          autogenerate: { directory: 'Recaps', collapsed: true },
+          collapsed: true,
+          items: [{ autogenerate: { directory: 'Recaps' } }],
         },
       ],
     }),

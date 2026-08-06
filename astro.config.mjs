@@ -8,7 +8,6 @@ export default defineConfig({
       [
         remarkWikiLink,
         {
-          // Converts spaces in page names to hyphens and lowercases them for valid URLs
           pageResolver: (pageName) => [
             pageName.toLowerCase().replace(/ /g, '-'),
           ],
@@ -22,10 +21,22 @@ export default defineConfig({
       title: 'Journey To Our End',
       customCss: ['./src/styles/custom.css'],
       sidebar: [
-        { label: 'Locations', items: [{ autogenerate: { directory: 'Locations' } }] },
-        { label: 'NPCs', items: [{ autogenerate: { directory: 'NPCs' } }] },
-        { label: 'Party', items: [{ autogenerate: { directory: 'Party' } }] },
-        { label: 'Recaps', items: [{ autogenerate: { directory: 'Recaps' } }] },
+        {
+          label: 'Locations',
+          autogenerate: { directory: 'Locations', collapsed: true },
+        },
+        {
+          label: 'NPCs',
+          autogenerate: { directory: 'NPCs', collapsed: true },
+        },
+        {
+          label: 'Party',
+          autogenerate: { directory: 'Party', collapsed: true },
+        },
+        {
+          label: 'Recaps',
+          autogenerate: { directory: 'Recaps', collapsed: true },
+        },
       ],
     }),
   ],

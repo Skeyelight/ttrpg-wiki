@@ -7,10 +7,22 @@ export default defineConfig({
       title: 'Journey To Our End',
       customCss: ['./src/styles/custom.css'],
       sidebar: [
-        { label: 'Locations', autogenerate: { directory: 'Locations' } },
-        { label: 'NPCs', autogenerate: { directory: 'NPCs' } },
-        { label: 'Party', autogenerate: { directory: 'Party' } },
-        { label: 'Recaps', autogenerate: { directory: 'Recaps' } },
+        {
+          label: 'Locations',
+          items: [{ autogenerate: { directory: 'Locations' } }],
+        },
+        {
+          label: 'NPCs',
+          items: [{ autogenerate: { directory: 'NPCs' } }],
+        },
+        {
+          label: 'Party',
+          items: [{ autogenerate: { directory: 'Party' } }],
+        },
+        {
+          label: 'Recaps',
+          items: [{ autogenerate: { directory: 'Recaps' } }],
+        },
       ],
     }),
   ],

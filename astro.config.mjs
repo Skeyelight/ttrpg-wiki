@@ -10,25 +10,17 @@ export default defineConfig({
         {
           aliasDivider: '|',
           pageResolver: (pageName) => {
-            // Clean up casing and spaces
-            const clean = pageName.trim().toLowerCase().replace(/ /g, '-');
+            // Strip any leading subfolders like 'Party/Rathgar' -> 'Rathgar'
+            const cleanName = pageName.includes('/')
+              ? pageName.split('/').pop()
+              : pageName;
 
-            // If a path was explicitly provided (e.g. Party/Cole), preserve the path structure!
-            if (clean.includes('/')) {
-              return [clean];
-            }
+            const slug = cleanName.trim().toLowerCase().replace(/ /g, '-');
 
-            // Fallback resolver for simple links (e.g. [[Cole]])
-            return [
-              `party/${clean}`,
-              `npcs/${clean}`,
-              `locations/${clean}`,
-              `relics/${clean}`,
-              `recaps/${clean}`,
-              clean,
-            ];
+            // Route all wikilinks directly to the backlinks index route
+            return [`backlinks/${slug}`];
           },
-          hrefTemplate: (permalink) => `/${permalink.toLowerCase()}`,
+          hrefTemplate: (permalink) => `/${permalink}`,
         },
       ],
     ],

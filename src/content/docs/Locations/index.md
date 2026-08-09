@@ -20,4 +20,4 @@ Welcome to the locations index. Browse the sidebar or select a location below:
 - [[Locations/Yester Hill|Yester Hill]]
 - [[Locations/Town of Vallaki/index|Town of Valaki]]
 - [[Locations/Village of Barovia|Village of Barovia]]
-- [[Locations/Village of Krezk|Villahe of Krezk]]
+- [[Locations/Village of Krezk|Village of Krezk]]

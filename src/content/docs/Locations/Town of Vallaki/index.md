@@ -1,7 +1,13 @@
 ---
-title: Town of Vallaki
-description: The Town of Vallaki and the locations within
+title: "Town of Vallaki"
+sidebar:
+  label: "Overview"
+  order: 1
 ---
+
+# Town of Vallaki
+
+Welcome to Vallaki...
 
 - [[Locations/Town of Vallaki/Arasek Stockyard|Arasek Stockyard]]
 - [[Locations/Town of Vallaki/Blinksy Toys|Blinksy Toys]]

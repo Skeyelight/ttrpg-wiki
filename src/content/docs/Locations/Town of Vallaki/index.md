@@ -2,7 +2,7 @@
 title: "Town of Vallaki"
 sidebar:
   label: "Overview"
-  order: 1
+  order: 3
 ---
 
 # Town of Vallaki

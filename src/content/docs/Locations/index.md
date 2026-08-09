@@ -1,6 +1,8 @@
 ---
 title: All Locations
 description: All locations in our campaign.
+sidebar:
+  order: 1
 ---
 
 # Campaign Locations

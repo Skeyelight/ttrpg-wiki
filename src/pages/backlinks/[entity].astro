@@ -2,11 +2,8 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 
-// IMPORT STARLIGHT BASE STYLES TO RESTORE THE UI & SIDEBAR STYLING
-import '@astrojs/starlight/style/props.css';
-import '@astrojs/starlight/style/reset.css';
-import '@astrojs/starlight/style/shiki.css';
-import '@astrojs/starlight/style/util.css';
+// Import your custom CSS directly if you want your gold theme applied here
+import '../../styles/custom.css';
 
 interface LinkedPage {
   title: string;

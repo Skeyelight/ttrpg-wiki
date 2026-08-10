@@ -1,7 +1,7 @@
 ---
-title: "Ismark Kol­yanovich"
+title: "Ismark Kolyanovich"
 ---
 
-# Ismark Kol­yanovich
+# Ismark Kolyanovich
 
 Notes coming soon...

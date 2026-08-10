@@ -10,17 +10,24 @@ export default defineConfig({
         {
           aliasDivider: '|',
           pageResolver: (pageName) => {
-            // Strip any leading subfolders like 'Party/Rathgar' -> 'Rathgar'
-            const cleanName = pageName.includes('/')
-              ? pageName.split('/').pop()
-              : pageName;
+            const clean = pageName.trim().toLowerCase().replace(/ /g, '-');
 
-            const slug = cleanName.trim().toLowerCase().replace(/ /g, '-');
+            // If a explicit path is provided (e.g. [[Party/Rathgar]]), use that path directly
+            if (clean.includes('/')) {
+              return [clean];
+            }
 
-            // Route all wikilinks directly to the backlinks index route
-            return [`backlinks/${slug}`];
+            // Fallback resolver for simple links (e.g. [[Rathgar]])
+            return [
+              `party/${clean}`,
+              `npcs/${clean}`,
+              `locations/${clean}`,
+              `relics/${clean}`,
+              `recaps/${clean}`,
+              clean,
+            ];
           },
-          hrefTemplate: (permalink) => `/${permalink}`,
+          hrefTemplate: (permalink) => `/${permalink.toLowerCase()}`,
         },
       ],
     ],
@@ -45,7 +52,7 @@ export default defineConfig({
           collapsed: true,
           items: [{ autogenerate: { directory: 'Party' } }],
         },
-                {
+        {
           label: 'Relics',
           collapsed: true,
           items: [{ autogenerate: { directory: 'Relics' } }],

@@ -9,10 +9,7 @@ sidebar:
 
 Welcome to the relics index. Browse the sidebar or select a relic below:
 
-[Holy Symbole of Ravenkind](<Holy Symbol of Ravenkind.md>)
-
-[Angel's Feather](<Angel Feather>)
-
-[Raven's Feather](<Raven's Feather.md>)
-
-[Tome of Strahd](<Tome of Strahd.md>)
+- [[Relics/Angel Feather|Angel's Feather]]
+- [[Relics/Holy Symbol of Ravenkind|Holy Symbol of Ravenkind]]
+- [[Relics/Raven's Feather|Raven's Feather]]
+- [[Relics/Tome of Strahd|Tome of Strahd]]

@@ -2,6 +2,6 @@
 title: "Tome of Strahd"
 ---
 
-# Tome of Strahd
+The Tome of Strahd is kept closed by a locked, enchanted steel clasp. The contents inside are still a mystery. 
 
-Notes coming soon...
+![Tome of Strahd](../../../../public/images/Tome_of_Strahd.webp)
